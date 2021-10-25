@@ -10,7 +10,7 @@
 #include "sub_dvb_sub.h"
 #include "sub_subtitle.h"
 #include "sub_io.h"
-
+#include "sub_set_sys.h"
 static unsigned SPU_RD_HOLD_SIZE = 0x20;
 #define OSD_HALF_SIZE (1920*1280/8)
 

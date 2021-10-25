@@ -14,11 +14,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := libjnivendorfont
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
-
-LOCAL_SRC_FILES := arm/libvendorfont.so
-
+LOCAL_SRC_FILES_arm := arm/libvendorfont.so
+LOCAL_SRC_FILES_arm64 := arm64/libvendorfont.so
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26 && echo OK),OK)
 #LOCAL_PROPRIETARY_MODULE := true
 endif
@@ -31,7 +31,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := libtvsubtitle_tv
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := DTVSubtitle.cpp
-LOCAL_ARM_MODE := arm
+LOCAL_ARM_MODE := arm64
 LOCAL_CFLAGS += -DSUPPORT_ADTV
 LOCAL_CFLAGS += -DUSE_VENDOR_ICU
 LOCAL_C_INCLUDES := external/libzvbi/src \
@@ -75,7 +75,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := libjnifont_tv
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := Fonts.cpp
-LOCAL_ARM_MODE := arm
+LOCAL_ARM_MODE := arm64
 
 LOCAL_C_INCLUDES := \
     $(JNI_H_INCLUDE) \

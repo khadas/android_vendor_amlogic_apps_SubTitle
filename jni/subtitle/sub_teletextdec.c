@@ -4,7 +4,7 @@
  * Copyright (c) 2013 Marton Balint
  *
  * This library is free software; you can redistribute it and/or
-/*
+*
 * Copyright (c) 2014 Amlogic, Inc. All rights reserved.
 *
 * This source code is subject to the terms and conditions defined in the
@@ -30,6 +30,7 @@
 
 #include "sub_teletextdec.h"
 #include "sub_dvb_sub.h"
+#include "sub_io.h"
 
 
 #include <libzvbi.h>
